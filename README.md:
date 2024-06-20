@@ -1,0 +1,42 @@
+# FastAPI Text Summarizer
+
+Цей проект реалізує API для підсумовування тексту за допомогою FastAPI та OpenAI.
+
+## Вимоги
+
+- Python 3.11
+- FastAPI
+- Uvicorn
+- langchain_community
+
+## Встановлення
+
+1. Клонуйте репозиторій:
+    
+    git clone <URL>
+    cd fastapi-langchain-summarizer
+    
+
+2. Створіть віртуальне середовище та активуйте його:
+    
+    python3 -m venv .venv
+    source .venv/bin/activate  # /MacOS
+    
+
+3. Встановіть залежності:
+pip install fastapi uvicorn langchain-community
+
+
+## Використання
+
+1. Запустіть сервер:
+    
+    uvicorn main:app --reload
+    
+
+2. Надішліть POST запит на http://127.0.0.1:8000/summarize з JSON тілом, що містить текст для підсумовування. Наприклад:
+    ```json
+    {
+      "text": "Це приклад тексту, який потрібно обробити"
+    }
+    ```
